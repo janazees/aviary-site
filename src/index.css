@@ -1,4 +1,35 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap");
 @import "tailwindcss";
+ 
+@theme {
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+ 
+  --color-linen: #f4efe4;
+  --color-sand: #e8e0cd;
+  --color-sage: #c5d1b3;
+  --color-leaf: #8fa97a;
+  --color-moss: #566f48;
+  --color-forest: #22362a;
+}
+ 
 html {
   scroll-behavior: smooth;
+}
+ 
+body {
+  font-family: var(--font-body);
+  color: var(--color-forest);
+  background: var(--color-linen);
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+ 
+html {
+  scroll-padding-top: 5rem;
 }
